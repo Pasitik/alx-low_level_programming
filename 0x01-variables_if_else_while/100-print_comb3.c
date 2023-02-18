@@ -12,8 +12,6 @@ int main(void)
 {
 	int a, b;
 
-	typedef int be_happy;
-
 	for (a = 0; a <= 99; a++)
 	{
 		for (b = a + 1; b <= 99; b++)
