@@ -3,5 +3,5 @@
 #include <stdio.h>
 
  int _putchar(char c);
- void print_aphabet(void);
+ void print_alphabet(void);
 #endif
