@@ -1,4 +1,5 @@
-
+#ifndef HEADER_FILE
+#define HEADER_FILE
 /**
  * _putchar - my putchar func
  *
@@ -9,3 +10,4 @@
 		putchar(text); 
 		return (0);
 }
+#endif
