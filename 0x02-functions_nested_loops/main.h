@@ -1,6 +1,6 @@
 #ifndef HEADER_FILE
 #define HEADER_FILE
-#include <std.io>
+#include <stdio.h>
 /**
  * _putchar - my putchar func
  *
