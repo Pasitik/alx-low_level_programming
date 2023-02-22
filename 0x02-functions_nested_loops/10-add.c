@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_last_digit - function for lowercase checks
+ * add - function for lowercase checks
  * @a: param 1
  * @b: param 2
  * Return: 1 for lowercase and 0 for anything else
