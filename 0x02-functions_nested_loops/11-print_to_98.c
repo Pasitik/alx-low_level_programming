@@ -6,7 +6,7 @@
  * @n: param
  * Return: 1 for lowercase and 0 for anything else
  */
-int print_to_98(int n)
+void print_to_98(int n)
 {
 	if (n < 98)
 	{
