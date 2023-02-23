@@ -1,7 +1,6 @@
-
 #include "main.h"
 /**
- * _idigit - check the code.
+ * _isdigit - check the code.
  *
  * @c: input
  * Return: Always 0.
