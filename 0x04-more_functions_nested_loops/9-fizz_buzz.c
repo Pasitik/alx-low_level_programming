@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 /**
  * main - check the code
  *
@@ -27,6 +28,8 @@ int main(void)
 			printf("%d ", i);
 		}
 	}
+	
 	printf("\n");
+
     return (0);
 }
