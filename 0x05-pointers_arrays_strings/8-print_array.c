@@ -13,7 +13,7 @@ void print_array(int *a, int n)
 
 	int i;
 
-	while (*(str + len) != '\0')
+	while (*(a + len) != '\0')
 	{
 		len++;
 	}
