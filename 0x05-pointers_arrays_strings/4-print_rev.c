@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * _puts - check the code
+ * print_rev - check the code
  *
  * @s: param
  * Return: Always 0.
  */
-void _puts(char *s)
+void print_rev(char *s)
 {
 	int len = 0;
 
