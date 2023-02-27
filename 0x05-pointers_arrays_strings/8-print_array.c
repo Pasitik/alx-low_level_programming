@@ -22,10 +22,12 @@ void print_array(int *a, int n)
 		if (i != n - 1)
 		{
 			printf("%d, ", *(a + i));
+			fflush(stdout);
 		}
 		else
 		{
 			printf("%d", *(a + i));
+			fflush(stdout);
 		}
 	}
 	_putchar('\n');
