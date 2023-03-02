@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strcat - check the code
+ * _strncat - check the code
  *
  * @dest: param1
  * @src: param2
