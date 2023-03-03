@@ -6,7 +6,7 @@
  * @str: param3
  * Return: str.
  */
-void *string_toupper(char *str)
+char *string_toupper(char *str)
 {
 	int i = 0;
 
