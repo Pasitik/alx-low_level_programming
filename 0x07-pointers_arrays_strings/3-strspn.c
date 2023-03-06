@@ -7,14 +7,29 @@
  * @accept: param2
  * Return: pointer.
  */
-unsigned int _strspn(char *s, char accept)
+unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int i = 0;
 
-	while (i < n)
+	while (*(s + i) != '\0')
 	{
-		*(s + i) = b;
+		int flag = 0;
+
+		int j = 0;
+
+		while (*(accept + j) != '\0')
+		{
+			if (*(s + i) == *(accept + j))
+			{
+				flag++;
+			}
+			j++;
+		}
+		if (flag == 0)
+		{
+			return (i);
+		}
 		i++;
 	}
-	return (s);
+	return (0);
 }
