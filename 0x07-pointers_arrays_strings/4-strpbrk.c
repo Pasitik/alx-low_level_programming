@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strbprk - check the code
+ * _strpbrk - check the code
  *
  * @s: param1
  * @accept: param2
