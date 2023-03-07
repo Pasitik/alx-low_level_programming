@@ -7,7 +7,7 @@
  * @to: param2
  * Return: pointer.
  */
-void set_string(char **s, *to)
+void set_string(char **s, char *to)
 {
 	*s = to;
 }
