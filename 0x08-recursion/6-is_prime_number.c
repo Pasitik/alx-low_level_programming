@@ -1,6 +1,6 @@
 #include "main.h"
 
-int prime(int n, int nums);
+int prime(int n, int count, int i);
 /**
  * is_prime_number - check the code
  *
@@ -9,7 +9,16 @@ int prime(int n, int nums);
  */
 int is_prime_number(int n)
 {
-		return (prime(n, 1));
+		int track = prime(n, 1, 0);
+
+		if (track > 2 || track < 2)
+		{
+			return (0);
+		}
+		if (track == 2)
+		{
+			return (1);
+		}
 }
 
 /**
