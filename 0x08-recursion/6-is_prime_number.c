@@ -15,21 +15,20 @@ int is_prime_number(int n)
 /**
   * prime - Calculates the prime
   * @n: number to calculate the square root
-  * @nums: iterate number
+  * @count: iterate number
+  * @i: tracker
   *
   * Return: the prime
   */
-int prime(int n, int nums)
+int prime(int n, int count, int i)
 {
-	if (nums <= 1)
+	if (count > n)
 	{
-		return (0);
+		return (i);
 	}
-	if (n % nums == 0 && nums > 1)
+	if (n % count == 0)
 	{
-		return (0);
+		i++;
 	}
-	if ((n / nums) < nums)
-		return (1);
-	return (prime(n, nums + 1));
+	return (prime(n, count + 1, i));
 }
