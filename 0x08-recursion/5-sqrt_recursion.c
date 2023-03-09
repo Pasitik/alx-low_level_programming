@@ -1,4 +1,5 @@
 #include "main.h"
+int sqrt(int n, int nums);
 
 /**
  * _sqrt_recursion - check the code
