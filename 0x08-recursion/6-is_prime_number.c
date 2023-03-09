@@ -2,7 +2,7 @@
 
 int prime(int n, int nums);
 /**
- * is_prime_number - check the code
+ * _is_prime_number - check the code
  *
  * @n: param2
  * Return: sqrt.
@@ -31,5 +31,5 @@ int prime(int n, int nums)
 	}
 	if ((n / nums) < nums)
 		return (1);
-	return (n, nums + 1);
+	return (prime(n, nums + 1));
 }
