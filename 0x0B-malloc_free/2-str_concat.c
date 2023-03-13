@@ -33,11 +33,11 @@ char *str_concat(char *s1, char *s2)
 
 	for (i = 0; i < lenA ; i++)
 	{
-		*(p + i) = *(s + i);
+		*(p + i) = *(s1 + i);
 	}
 	while (j < lenB)
 	{
-		*(p + i + j) = *(s2 + j)
+		*(p + i + j) = *(s2 + j);
 		j++;
 	}
 	return (p);
@@ -56,7 +56,7 @@ int len(char *a)
 
 	while (*(a + i) != '\0')
 	{
-		i++
+		i++;
 	}
 	return (i);
 }
