@@ -1,0 +1,32 @@
+#include "main.h"
+
+/**
+ * _strdup - my function
+ *
+ * @str : param1
+ * Return: p
+ */
+char *_strdup(char *str)
+{
+
+	char *p;
+
+	int len = 0;
+
+	while (*(str + len) != '\0')
+	{
+		len++;
+	}
+
+	p = (char *) malloc(sizeof(char) * len);
+	if (p == NULL)
+	{
+		return (NULL);
+	}
+
+	for (i = 0; i < len; i++)
+	{
+		*(p + i) = *(str + i);
+	}
+	return (p);
+}
