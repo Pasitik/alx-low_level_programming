@@ -14,7 +14,7 @@ char *str_concat(char *s1, char *s2)
 
 	int i, j, = 0;
 
-	//int lenA, lenB, size;
+	/*int lenA, lenB, size;*/
 	
 	int lenA = len(s1);
 
