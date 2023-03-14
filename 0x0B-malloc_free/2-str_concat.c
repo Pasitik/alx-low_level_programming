@@ -24,6 +24,11 @@ char *str_concat(char *s1, char *s2)
 	{
 		s2 = "";
 	}
+	
+	if (s1 == NULL && s2 == NULL)
+	{
+		return (NULL);
+	}
 
 	lenA = len(s1);
 
@@ -32,10 +37,6 @@ char *str_concat(char *s1, char *s2)
 	size = lenA + lenB;
 
 	if (size == 0)
-	{
-		return (NULL);
-	}
-	if (s1 == NULL && s2 == NULL)
 	{
 		return (NULL);
 	}
