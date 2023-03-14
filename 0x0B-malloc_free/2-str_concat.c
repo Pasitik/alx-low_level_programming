@@ -12,7 +12,7 @@ char *str_concat(char *s1, char *s2)
 {
 	char *p;
 
-	int i, j = 0;
+	int i, j, lenA, lenB, size = 0;
 	
 	if(s1 == NULL)
 	{
@@ -24,11 +24,11 @@ char *str_concat(char *s1, char *s2)
 		s2 = "";
 	}
 
-	int lenA = len(s1);
+	lenA = len(s1);
 
-	int lenB = len(s2);
+	lenB = len(s2);
 
-	int size = lenA + lenB;
+	size = lenA + lenB;
 
 	if (size == 0)
 	{
