@@ -15,7 +15,11 @@ char *str_concat(char *s1, char *s2)
 	int i, j = 0;
 
 	int lenA, lenB, size;
-	
+	if(s1 == NULL && s2 == NULL)
+	{
+		return (NULL);
+	}
+
 	if (s1 == NULL)
 	{
 		s1 = "";
@@ -27,14 +31,8 @@ char *str_concat(char *s1, char *s2)
 	lenA = len(s1);
 
 	lenB = len(s2);
-	
 
-	if (s1 == ""  && s2 == "")
-	{
-		size = 0;
-	}
-	else
-		size = lenA + lenB;
+	size = lenA + lenB;
 
 	if (size == 0)
 	{
