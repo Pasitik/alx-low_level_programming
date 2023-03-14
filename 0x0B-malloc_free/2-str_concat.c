@@ -13,6 +13,16 @@ char *str_concat(char *s1, char *s2)
 	char *p;
 
 	int i, j = 0;
+	
+	if(s1 == NULL)
+	{
+		s1 = "";
+	}
+
+	if(s2 == NULL)
+	{
+		s2 = "";
+	}
 
 	int lenA = len(s1);
 
@@ -27,14 +37,6 @@ char *str_concat(char *s1, char *s2)
 	if (s1 == NULL && s2 == NULL)
 	{
 		return (NULL);
-	}
-	if (s1 == NULL)
-	{
-		s1 = "";
-	}
-	if (s2 == NULL)
-	{
-		s2 = "";
 	}
 
 	p = (char *) malloc((sizeof(char) * size) + 1);
