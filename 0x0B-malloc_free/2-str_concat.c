@@ -14,13 +14,13 @@ char *str_concat(char *s1, char *s2)
 
 	int i, j = 0;
 
-	/*int lenA, lenB, size;*/
+	int lenA, lenB, size;
 	
-	int lenA = len(s1);
+	lenA = len(s1);
 
-	int lenB = len(s2);
+	lenB = len(s2);
 
-	int size = lenA + lenB;
+	size = lenA + lenB;
 
 	if (size == 0)
 	{
