@@ -24,12 +24,17 @@ char *str_concat(char *s1, char *s2)
 	{
 		s2 = "";
 	}
-
 	lenA = len(s1);
 
 	lenB = len(s2);
+	
 
-	size = lenA + lenB;
+	if (s1 == ""  && s2 == "")
+	{
+		size = 0;
+	}
+	else
+		size = lenA + lenB;
 
 	if (size == 0)
 	{
