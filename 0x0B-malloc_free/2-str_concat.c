@@ -12,13 +12,15 @@ char *str_concat(char *s1, char *s2)
 {
 	char *p;
 
-	int i, j, lenA, lenB, size;
+	int i, j, = 0;
+
+	//int lenA, lenB, size;
 	
-	lenA = len(s1);
+	int lenA = len(s1);
 
-	lenB = len(s2);
+	int lenB = len(s2);
 
-	size = lenA + lenB;
+	int size = lenA + lenB;
 
 	if (size == 0)
 	{
