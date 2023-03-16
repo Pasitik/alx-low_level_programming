@@ -20,6 +20,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	size = lenA + n;
 
 	p = (char *) malloc((sizeof(char) * size) + 1);
+	
+	if (p == NULL)
+		return (NULL);
 
 	while (*(s1 + i) != '\0')
 	{
