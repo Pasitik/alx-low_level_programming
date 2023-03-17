@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 
 	lenA = _strlen(argv[1]);
 	lenB = _strlen(argv[2]);
-	length = lenA + lenB + 1;
+	length = lenA + lenB;
 
 	num1 = strtol(argv[1], NULL, 10);
 	num2 = strtol(argv[2], NULL, 10);
