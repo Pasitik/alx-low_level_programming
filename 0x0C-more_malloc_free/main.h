@@ -13,4 +13,5 @@ int _strlen(char *str);
 void err_case(void);
 int is_digit(char *s);
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
+void zero_check(int num1, int num2);
 #endif /* MAIN_H */

@@ -22,13 +22,7 @@ int main(int argc, char *argv[])
 	num1 = strtol(argv[1], NULL, 10);
 	num2 = strtol(argv[2], NULL, 10);
 
-	if (num1 == 0 || num2 == 0)
-	{
-		_putchar('0');
-		_putchar('\n');
-		return (0);
-	}
-
+	zero_check(num1, num2);
 	mul = num1 * num2;
 
 	p = (char *) malloc(sizeof(char) * length);
@@ -112,4 +106,15 @@ int is_digit(char *s)
 		i++;
 	}
 	return (1);
+}
+
+
+void zero_check(int num1, int num2)
+{
+	if (num1 == 0 || num2 == 0)
+	{
+		_putchar('0');
+		_putchar('\n');
+		exit(98);
+	}
 }
