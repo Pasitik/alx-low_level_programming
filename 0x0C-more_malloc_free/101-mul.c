@@ -9,15 +9,15 @@
  */
 int main(int argc, char *argv[])
 {
-	int mul, i = 0;
+	int mul, num1, num2, lenA, lenB, length, i = 0;
 	char *p;
-	int num1, num2;
-	int lenA = _strlen(argv[1]);
-	int lenB = _strlen(argv[2]);
-	int length = lenA + lenB + 1;
 
 	if (argc != 3 || !is_digit(argv[1]) || !is_digit(argv[2]))
 		err_case();
+
+	lenA = _strlen(argv[1]);
+	lenB = _strlen(argv[2]);
+	length = lenA + lenB + 1;
 
 	num1 = strtol(argv[1], NULL, 10);
 	num2 = strtol(argv[2], NULL, 10);
