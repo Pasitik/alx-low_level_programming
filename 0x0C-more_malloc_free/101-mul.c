@@ -45,6 +45,7 @@ int main(int argc, char *argv[])
 		i--;
 	}
 	_putchar('\n');
+	free(p);
 	return (0);
 }
 
