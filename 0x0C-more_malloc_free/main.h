@@ -12,4 +12,5 @@ int *array_range(int min, int max);
 int _strlen(char *str);
 void err_case(void);
 int is_digit(char *s);
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 #endif /* MAIN_H */
