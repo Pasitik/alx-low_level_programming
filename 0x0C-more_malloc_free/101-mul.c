@@ -108,7 +108,13 @@ int is_digit(char *s)
 	return (1);
 }
 
-
+/**
+ * zero_check - ....
+ *
+ * @num1: ....
+ * @num2: ....
+ * Return: void
+ */
 void zero_check(int num1, int num2)
 {
 	if (num1 == 0 || num2 == 0)
