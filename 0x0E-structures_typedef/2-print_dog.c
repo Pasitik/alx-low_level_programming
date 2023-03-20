@@ -1,4 +1,4 @@
-#include "dog.h"6
+#include "dog.h"
 
 /**
  * print_dog - print func;
