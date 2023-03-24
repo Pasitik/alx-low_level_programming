@@ -17,5 +17,5 @@ typedef struct format_types
 {
 	char *identifier;
 	void (*f)(char *separator, va_list args);
-} ph;
+} f_dt;
 #endif
