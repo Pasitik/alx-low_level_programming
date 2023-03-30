@@ -1,13 +1,23 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef _LINKED_LIST
+#define _LINKED_LIST
 
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct node{
-char *str;
-int len;
-struct node* next;
+/**
+ * struct list_s - singly linked list
+ * @str: string - (malloc'ed string)
+ * @len: length of the string
+ * @next: points to the next node
+ *
+ * Description: singly linked list node structure
+ * for alx project
+ */
+typedef struct node
+{
+	char *str;
+	int len;
+	struct node* next;
 }list_t;
 
 int _putchar(char c);
