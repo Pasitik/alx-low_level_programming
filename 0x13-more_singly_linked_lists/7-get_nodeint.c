@@ -22,5 +22,5 @@ count++;
 }
 if (!temp)
 	return (NULL);
-return (temp);
+return (temp->next);
 }
