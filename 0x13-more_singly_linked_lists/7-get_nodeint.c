@@ -20,5 +20,7 @@ while (temp !=NULL && count < index)
 temp = temp->next;
 count++;
 }
-return (temp->next);
+if (!temp)
+	return (NULL);
+return (temp);
 }
