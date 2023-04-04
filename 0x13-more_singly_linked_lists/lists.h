@@ -18,7 +18,7 @@ typedef struct node
 	int n;
 	struct node *next;
 }
-list_t;
+listint_t;
 
 int _putchar(char c);
 size_t print_listint(const listint_t *h);
