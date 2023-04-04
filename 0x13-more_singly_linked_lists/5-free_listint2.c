@@ -12,7 +12,7 @@ listint_t *temp;
 
 if (*head == NULL)
 {
-return (NULL);
+return;
 }
 while (*head != NULL)
 {
