@@ -14,10 +14,7 @@ unsigned int idx, int n)
 listint_t *newNode;
 listint_t *temp = *head;
 unsigned int pos = 0;
-unsigned int len = listint_len(*head);
 
-if (idx > len)
-return (NULL);
 
 
 newNode = (listint_t *) malloc(sizeof(listint_t));
