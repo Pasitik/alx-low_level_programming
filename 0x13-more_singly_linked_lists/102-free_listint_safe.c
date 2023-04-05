@@ -41,7 +41,7 @@ while (*h != NULL)
 new = malloc(sizeof(listp_t));
 
 if (new == NULL)
-			exit(98);
+exit(98);
 
 new->p = (void *)*h;
 new->next = hptr;
