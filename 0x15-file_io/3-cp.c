@@ -1,6 +1,28 @@
 #include "main.h"
 
 /**
+ * close - ...
+ *
+ * @file_from: ...
+ * @file_to: ...
+ * Return: ...
+ */
+void close_file(ssize_t file_from, ssize_t file_to)
+{
+	if (close(file_from) == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %ld\n", file_from);
+		exit(100);
+	}
+	if (close(file_to) == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %ld\n", file_to);
+		exit(100);
+	}
+}
+
+
+/**
  * main - ...
  *
  * @argc: ...
@@ -29,7 +51,7 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	file_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	file_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC);
 	if (file_to == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
@@ -37,7 +59,7 @@ int main(int argc, char *argv[])
 	}
 
 	size_read = read(file_from, buffer, BUFFER_SIZE);
-	if (size_read > 0)
+	while (size_read > 0)
 	{
 		size_written = write(file_to, buffer, size_read);
 		if (size_written == -1)
@@ -47,7 +69,9 @@ int main(int argc, char *argv[])
 		}
 	}
 
-	if (close(file_from) == -1)
+	close_file(file_from, file_to);
+
+	/*if (close(file_from) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
 		exit(100);
@@ -56,7 +80,7 @@ int main(int argc, char *argv[])
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_to);
 		exit(100);
-	}
+	}*/
 
 	return (0);
 }
