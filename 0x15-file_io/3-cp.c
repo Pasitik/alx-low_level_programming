@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 {
 	int file_from, file_to; 
 	char buffer[BUFFER_SIZE];
-	int size_read, size_written;
+	ssize_t size_read, size_written;
 
 	if (argc != 3)
 	{
