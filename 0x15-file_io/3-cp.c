@@ -73,7 +73,7 @@ int main(int argc, char *argv[])
 {
 	int file_from, file_to;
 	char buffer[BUFFER_SIZE];
-	mode_t mode = 0666;
+	mode_t mode = 0664;
 
 	if (argc != 3)
 	{
