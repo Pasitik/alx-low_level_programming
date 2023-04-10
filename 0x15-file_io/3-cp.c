@@ -7,16 +7,15 @@
  *
  * @file_from: ...
  * @file_to: ...
- * @size_read: ...
- * @size_written: ...
  * @buffer: ....
  * @argv: ...
  * Return: ...
  */
 void _copy(ssize_t file_from, ssize_t file_to,
- char buffer[BUFFER_SIZE], char *argv)
+char buffer[BUFFER_SIZE], char *argv)
 {
 	ssize_t size_read, size_written;
+
 	size_read = read(file_from, buffer, BUFFER_SIZE);
 
 	if (size_read == -1)
@@ -74,7 +73,7 @@ int main(int argc, char *argv[])
 {
 	int file_from, file_to;
 	char buffer[BUFFER_SIZE];
-	mode_t mode = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
+	mode_t mode = 0666;
 
 	if (argc != 3)
 	{
