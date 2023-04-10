@@ -13,18 +13,29 @@
  * @argv: ...
  * Return: ...
  */
-void _copy(ssize_t file_from, ssize_t file_to, ssize_t size_read,
-ssize_t size_written, char buffer[BUFFER_SIZE], char *argv)
+void _copy(ssize_t file_from, ssize_t file_to,
+ char buffer[BUFFER_SIZE], char *argv)
 {
+	ssize_t size_read, size_written;
 	size_read = read(file_from, buffer, BUFFER_SIZE);
-	if (size_read > 0)
+
+	if (size_read == -1)
 	{
-		size_written = write(file_to, buffer, size_read);
-		if (size_written == -1)
-		{
-			dprintf(STDERR_FILENO,  "Error: Can't write to %d\n", argv[2]);
-			exit(99);
-		}
+		dprintf(STDERR_FILENO, "Error: Can't read from file %d\n", argv[1]);
+		exit(98);
+	}
+
+	size_written = write(file_to, buffer, size_read);
+	if (size_written == -1)
+	{
+		dprintf(STDERR_FILENO,  "Error: Can't write to %d\n", argv[2]);
+		exit(99);
+	}
+
+	if (size_read == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %d\n", argv[1]);
+		exit(98);
 	}
 }
 
@@ -63,7 +74,6 @@ int main(int argc, char *argv[])
 {
 	int file_from, file_to;
 	char buffer[BUFFER_SIZE];
-	ssize_t size_read = -1, size_written = -1;
 	mode_t mode = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
 
 	if (argc != 3)
@@ -87,7 +97,7 @@ int main(int argc, char *argv[])
 	}
 
 
-	_copy(file_from, file_to, size_read, size_written, buffer, *argv);
+	_copy(file_from, file_to, buffer, *argv);
 
 	close_file(file_from, file_to);
 
