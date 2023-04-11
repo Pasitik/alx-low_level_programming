@@ -16,7 +16,7 @@ char buffer[BUFFER_SIZE], char *argv)
 {
 	ssize_t size_read, size_written;
 
-	while((size_read = read(file_from, buffer, BUFFER_SIZE)))
+	while ((size_read = read(file_from, buffer, BUFFER_SIZE)))
 	{
 
 		if (size_read == -1)
