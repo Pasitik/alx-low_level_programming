@@ -12,7 +12,7 @@
  * Return: ...
  */
 void _copy(ssize_t file_from, ssize_t file_to,
-char buffer[BUFFER_SIZE], char *argv)
+char buffer[BUFFER_SIZE], char argv)
 {
 	ssize_t size_read, size_written;
 
