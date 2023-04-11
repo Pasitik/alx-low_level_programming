@@ -71,7 +71,7 @@ void close_file(ssize_t file_from, ssize_t file_to)
  */
 
 
-int main(int argc, char argv[])
+int main(int argc, char *argv[])
 {
 	int file_from, file_to;
 	char buffer[BUFFER_SIZE];
@@ -98,7 +98,7 @@ int main(int argc, char argv[])
 	}
 
 
-	_copy(file_from, file_to, buffer, *argv);
+	_copy(file_from, file_to, buffer, argv);
 
 	close_file(file_from, file_to);
 
