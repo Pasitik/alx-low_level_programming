@@ -16,25 +16,27 @@ char buffer[BUFFER_SIZE], char *argv)
 {
 	ssize_t size_read, size_written;
 
-	size_read = read(file_from, buffer, BUFFER_SIZE);
-
-	if (size_read == -1)
+	while((size_read = read(file_from, buffer, BUFFER_SIZE)))
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %d\n", argv[1]);
-		exit(98);
-	}
 
-	size_written = write(file_to, buffer, size_read);
-	if (size_written == -1)
-	{
-		dprintf(STDERR_FILENO,  "Error: Can't write to %d\n", argv[2]);
-		exit(99);
-	}
+		if (size_read == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't read from file %d\n", argv[1]);
+			exit(98);
+		}
 
-	if (size_read == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %d\n", argv[1]);
-		exit(98);
+		size_written = write(file_to, buffer, size_read);
+		if (size_written == -1)
+		{
+			dprintf(STDERR_FILENO,  "Error: Can't write to %d\n", argv[2]);
+			exit(99);
+		}
+
+		if (size_read == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't read from file %d\n", argv[1]);
+			exit(98);
+		}
 	}
 }
 
@@ -88,7 +90,7 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	file_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, mode);
+	file_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC | O_APPEND, mode);
 	if (file_to == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
