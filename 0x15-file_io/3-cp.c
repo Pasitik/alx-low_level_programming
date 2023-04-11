@@ -12,7 +12,7 @@
  * Return: ...
  */
 void _copy(ssize_t file_from, ssize_t file_to,
-char buffer[BUFFER_SIZE], char argv)
+char buffer[BUFFER_SIZE], char **argv)
 {
 	ssize_t size_read, size_written;
 
@@ -21,20 +21,20 @@ char buffer[BUFFER_SIZE], char argv)
 
 		if (size_read == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %d\n", argv[1]);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 			exit(98);
 		}
 
 		size_written = write(file_to, buffer, size_read);
 		if (size_written == -1)
 		{
-			dprintf(STDERR_FILENO,  "Error: Can't write to %d\n", argv[2]);
+			dprintf(STDERR_FILENO,  "Error: Can't write to %s\n", argv[2]);
 			exit(99);
 		}
 
 		if (size_read == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %d\n", argv[1]);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 			exit(98);
 		}
 	}
@@ -71,7 +71,7 @@ void close_file(ssize_t file_from, ssize_t file_to)
  */
 
 
-int main(int argc, char *argv[])
+int main(int argc, char argv[])
 {
 	int file_from, file_to;
 	char buffer[BUFFER_SIZE];
