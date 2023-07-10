@@ -51,7 +51,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	else
 	{
-		ht->array[index] = malloc(sizeof(hash_node_t *));
+		ht->array[index] = malloc(ht->size * sizeof(hash_node_t *));
 		if(ht->array[index] == NULL)
 		{
 			free(_key);
